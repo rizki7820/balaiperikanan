@@ -104,7 +104,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="#" class="nav-link ">
+            <a href="/petugas" class="nav-link ">
               <i class="nav-icon fas fa-users"></i>
               <p>
                 Data Petugas
@@ -112,7 +112,7 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="#" class="nav-link ">
+            <a href="/chat" class="nav-link ">
               <i class="nav-icon fas fa-comments"></i>
               <p>
                 Live Chat
@@ -120,7 +120,15 @@
             </a>
           </li>
           <li class="nav-item ">
-            <a href="#" class="nav-link ">
+            <a href="/praktek" class="nav-link ">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Pengajuan Praktek
+              </p>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a href="/rekap" class="nav-link ">
               <i class="nav-icon fas fa-file"></i>
               <p>
                 Rekap Data
@@ -159,6 +167,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
+        @yield('content');
       </div>
     </section>
     <!-- /.content -->

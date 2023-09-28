@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PetugasController;
+use App\Http\Controllers\PusherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +22,17 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard.index');
 });
+
+Route::get('/praktek', function () {
+    return view('dashboard.praktek.index');
+});
+
+Route::controller(PetugasController::class)->group(function () {
+    Route::get('/petugas', 'index');
+});
+
+Route::controller(PusherController::class)->group(function () {
+    Route::get('/chat', 'index');
+});
+
+
