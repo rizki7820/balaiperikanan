@@ -27,7 +27,7 @@
                         <td>081934155978</td>
                         <td>SMK Negeri 1 Banjarbaru</td>
                         <td>
-                            <a href="" class="btn btn-primary">Terima Surat</a>
+                            <a href="" class="btn btn-primary">Terima Surat</a> 
                         </td>
                     </tr>
                     {{-- @endforeach --}}
