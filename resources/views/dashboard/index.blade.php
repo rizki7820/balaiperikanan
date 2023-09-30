@@ -127,14 +127,29 @@
               </p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a href="/rekap" class="nav-link ">
-              <i class="nav-icon fas fa-file"></i>
+          <li class="nav-item has-treeview">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-copy"></i>
               <p>
                 Rekap Data
+                <i class="fas fa-angle-left right"></i>
+                <span class="badge badge-info right"></span>
               </p>
             </a>
-          </li>
+            <ul class="nav nav-treeview">              
+              <li class="nav-item">
+                <a href="permintaan/permintaan.php" class="nav-link" data-toggle="modal" data-target="#modal-chat" >
+                  <i class="nav-icon fas fa-comments"></i>
+                  <p>Live Chat</p>
+                </a>
+              </li>
+               <li class="nav-item">
+                <a href="permintaan/permintaan.php" class="nav-link" data-toggle="modal" data-target="#modal-praktek">
+                  <i class="nav-icon fas fa-edit"></i>
+                  <p>Pengajuan Praktek</p>
+                </a>
+              </li>
+            </ul>
            
          
         </ul>
@@ -167,7 +182,7 @@
     <!-- Main content -->
     <section class="content">
       <div class="container-fluid">
-        @yield('content');
+        @yield('content')
       </div>
     </section>
     <!-- /.content -->
@@ -181,4 +196,109 @@
   <!-- /.control-sidebar -->
 
   
+
+  <div class="modal fade" id="modal-chat">
+        <div class="modal-dialog">
+          <div class="modal-content bg-default">
+            <div class="modal-header">
+              <h4 class="modal-title">Cetak Laporan</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="../laporan/laporankonfirmasifilter.php" method="post" target="_blank">
+                <center><table>
+                  <tr>
+                    <td>
+                    <div class="form-group">Dari Tanggal</div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="date" clas="form-control" name="tglAwal" required>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <div class="form-group">Sampai Tanggal</div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="date" clas="form-control" name="tglAkhir" required>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>                     
+                </center>                     
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button> 
+              <button type="submit" name="cetakkonfirmasi" class="btn btn-outline-primary" value="Cetak"><i class="fa fa-print"> Cetak Disini</i></button>
+
+              </form>  
+               </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+
+      <div class="modal fade" id="modal-praktek">
+        <div class="modal-dialog">
+          <div class="modal-content bg-default">
+            <div class="modal-header">
+              <h4 class="modal-title">Cetak Laporan</h4>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="../laporan/laporankonfirmasifilter.php" method="post" target="_blank">
+                <center><table>
+                  <tr>
+                    <td>
+                    <div class="form-group">Dari Tanggal</div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="date" clas="form-control" name="tglAwal" required>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                    <div class="form-group">Sampai Tanggal</div>
+                    </td>
+                    <td>
+                      <div class="form-group">
+                        <input type="date" clas="form-control" name="tglAkhir" required>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                </table>                     
+                </center>                     
+            <div class="modal-footer justify-content-between">
+              <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Close</button> 
+              <button type="submit" name="cetakkonfirmasi" class="btn btn-outline-primary" value="Cetak"><i class="fa fa-print"> Cetak Disini</i></button>
+
+              </form>  
+               </div>
+            </div>
+          </div>
+          <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+      </div>
+
+
 @include('dashboard.layout.footer')
